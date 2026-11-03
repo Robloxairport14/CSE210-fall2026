@@ -7,11 +7,11 @@ class Reference
     private int _endVS;
 
     // behavior
-    public Reference(bc)
+    public Reference(bc) //bc BookChapter
     {
         
     }
-    public Reference(bcse)
+    public Reference(bcse) //bcse BookChapter-Start-verse-End-verse
     {
         
     }
