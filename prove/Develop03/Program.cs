@@ -29,7 +29,7 @@ class Program
         
         Console.WriteLine("'Enter' or type 'quit'");
         string enter = Console.ReadLine();
-        while (enter == "")
+        while (enter == "" && scripture.AllHide() == false)
             {
             Console.Clear();
             scripture.Random();

@@ -35,14 +35,28 @@ class Scripture
 
     }
 
+    public bool AllHide()
+    {
+        foreach (Word c in _word)
+        {
+            if (c.GetHide() == false)
+            {
+                return false;
+            }
+        }
 
+        return true;
+    }
 
     public void Random()
     {
-
         Random random = new Random();
-        int count = random.Next(0, _word.Count);
-        Word d = _word[count];
+            Word d;
+        do
+        {    
+            int count = random.Next(0, _word.Count);
+            d = _word[count];
+        } while (d.GetHide() == true );
         d.Hide();
     }
     public void GetWords()

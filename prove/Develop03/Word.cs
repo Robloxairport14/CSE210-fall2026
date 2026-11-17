@@ -17,6 +17,12 @@ class Word
         _isHidden = true;
     }
 
+    public bool GetHide()
+    {
+        return _isHidden;
+
+    }
+
     public string GetDisplay()
     {
         if (_isHidden == true)
