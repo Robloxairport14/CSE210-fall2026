@@ -1,18 +1,32 @@
-class Words
+class Word
 {
     // attributes
     private string _text;
     private bool _isHidden;
+
+    public Word(string w)
+    {
+        _text = w;
+        _isHidden = false;
+    }
     
+    // Scripture count = new Scripture();
     // behavior
     public void Hide()
     {
-        
+        _isHidden = true;
     }
 
     public string GetDisplay()
     {
-        return;
-    }
+        if (_isHidden == true)
+        {
+            return new string('_' ,_text.Length).Replace("_","_ ");
+        }
 
+        else
+        {
+            return _text;
+        }
+    }
 }
